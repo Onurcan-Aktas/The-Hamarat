@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import useAuthStore from '../store/authStore'
 
+
 export default function Navbar() {
   const { isAuthenticated, user, logout } = useAuthStore()
   const navigate = useNavigate()
@@ -31,20 +32,24 @@ export default function Navbar() {
       }`}
     >
       <div className="page-container">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 " >
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="w-8 h-8 bg-clay rounded-lg flex items-center justify-center text-cream text-lg font-display font-bold shadow-sm group-hover:bg-clay-dark transition-colors">
-              H
+          <Link to="/" className="flex items-center gap-2 text-sm font-medium px-2 py-2 rounded-lg bg-white/60 backdrop-blur-md text-bark hover:bg-white/80 transition-all">
+            <span className="w-10 h-10 shadow-sm rounded-lg flex items-center justify-center transition-all group-hover:brightness-95">
+              <img 
+                src="/favicon.jpg" 
+                alt="Hamarat Logo" 
+                className="w-full h-full object-contain rounded-lg"
+              />
             </span>
-            <span className="font-display text-xl font-bold text-bark tracking-tight">
+            <span className="font-display text-xl font-bold text-black tracking-tight">
               Hamarat
             </span>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
-            <Link to="/" className="btn-ghost text-sm">Discover</Link>
+            <Link to="/" className="text-sm font-medium px-4 py-2 rounded-full bg-white/60 backdrop-blur-md text-bark hover:bg-white/80 transition-all">Discover</Link>
             {isAuthenticated && (
               <>
                 <Link to="/create" className="btn-ghost text-sm">+ New Recipe</Link>
@@ -79,7 +84,7 @@ export default function Navbar() {
               </div>
             ) : (
               <>
-                <Link to="/login" className="btn-ghost text-sm">Sign in</Link>
+                <Link to="/login" className="flex items-center gap-2 text-sm font-medium px-2 py-2 rounded-lg bg-white/60 backdrop-blur-md text-bark hover:bg-white/80 transition-all">Sign in</Link>
                 <Link to="/register" className="btn-primary text-sm py-2 px-4">
                   Join free
                 </Link>

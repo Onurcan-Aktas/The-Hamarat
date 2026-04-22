@@ -36,7 +36,10 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen pt-16 flex items-center justify-center px-4">
+    <div className="min-h-screen pt-30 flex items-center justify-center px-4 bg-cover bg-center bg-no-repeat relative"
+    style={{ backgroundImage: "url('/registerbg.webp')" }}>
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+
       <div className="w-full max-w-md animate-fade-up" style={{ animationFillMode: 'both' }}>
         <div className="bg-white rounded-3xl border border-smoke shadow-warm-lg overflow-hidden">
           <div className="h-1.5 bg-gradient-to-r from-clay via-gold to-clay-light" />
@@ -59,7 +62,7 @@ export default function RegisterPage() {
                   value={form.username}
                   onChange={handleChange}
                   autoComplete="username"
-                  placeholder="chef_extraordinaire"
+                  placeholder="Write your username"
                   minLength={3}
                   required
                   className="input-field"

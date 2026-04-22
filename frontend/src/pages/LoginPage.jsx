@@ -35,7 +35,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen pt-16 flex items-center justify-center px-4">
+    
+    <div className="min-h-screen pt-30 flex items-center justify-center px-4 bg-cover bg-center bg-no-repeat relative"
+    style={{ backgroundImage: "url('/registerbg.webp')" }}>
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
       <div className="w-full max-w-md animate-fade-up" style={{ animationFillMode: 'both' }}>
         {/* Card */}
         <div className="bg-white rounded-3xl border border-smoke shadow-warm-lg overflow-hidden">
