@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import useAuthStore from './store/authStore'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="*"              element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+       <Footer/> 
     </div>
   )
 }
