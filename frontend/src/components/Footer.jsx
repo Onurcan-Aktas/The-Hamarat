@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import About from './pages/About'
+import About from '../pages/About'
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
           <ul className="space-y-4">
             <li><Link to="/" className="text-gray-500 hover:text-orange-600 transition-colors text-sm">Discover</Link></li>
             <li><Link to="/create" className="text-gray-500 hover:text-orange-600 transition-colors text-sm">Add Your Recipe</Link></li>
-            {/* <li><Link to="/about" className="text-gray-500 hover:text-orange-600 transition-colors text-sm">About Us</Link></li> */}
+            <li><Link to="/about" className="text-gray-500 hover:text-orange-600 transition-colors text-sm">About Us</Link></li>
           </ul>
         </div>
 
@@ -30,7 +30,8 @@ const Footer = () => {
         <div>
           <h4 className="text-gray-800 font-semibold mb-6">Support & Social</h4>
           <ul className="space-y-4 mb-6">
-            <li><Link to="/" className="text-gray-500 hover:text-orange-600 transition-colors text-sm">Terms of Use</Link></li>
+            <li><Link to="/termsofuse" className="text-gray-500 hover:text-orange-600 transition-colors text-sm">Terms of Use</Link></li>
+            <li><Link to="/contact" className="text-gray-500 hover:text-orange-600 transition-colors text-sm">Contact Us</Link></li>
           </ul>
           <div className="flex justify-center md:justify-start space-x-4">
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-600 

@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const About = () => {
+const navigate = useNavigate();
+
   return (
     <div className="bg-[#fdfcfb] min-vh-100 pt-24 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
@@ -57,7 +61,7 @@ const About = () => {
         <div className="bg-orange-700 text-white rounded-3xl p-10 text-center">
           <h2 className="text-2xl font-bold mb-4">Join Our Journey</h2>
           <p className="opacity-90 mb-6">We are constantly evolving and adding new features to make your kitchen smarter.</p>
-          <button className="bg-white text-orange-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all">
+          <button onClick={() => navigate('/contact')} className="bg-white text-orange-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all " >
             Contact Us
           </button>
         </div>
